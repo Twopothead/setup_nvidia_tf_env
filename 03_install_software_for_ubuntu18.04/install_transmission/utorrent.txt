@@ -1,0 +1,2 @@
+https://www.sohu.com/a/224384553_630789
+uTorrent是由BitTorrent Inc拥有的封闭源的BitTorrent客户端。uTorrent使用bt协议来传输更大的文件，在p2p网络估计占所有互联网流量的35%。uTorrent是轻量级的torrent客户端，它使用非常少的计算机资源，同时提供与其他大型bt客户(如Vuze或BitComet)类似的完整功能。

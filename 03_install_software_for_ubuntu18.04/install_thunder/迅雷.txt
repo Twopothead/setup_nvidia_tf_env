@@ -1,0 +1,8 @@
+wine迅雷的乱码问题
+https://github.com/jiazhoulvke/myblog/blob/5bbf68dd91bf8965813f8797a82a11a20916b776/content/post/wine%E8%BF%85%E9%9B%B7%E7%9A%84%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98.md
+迅雷安装
+https://github.com/xukimseven/xukimseven.github.io/blob/7e88e00285f73a1e8c45127156de52444d2f6de6/_posts/2018-03-13-%5Bubuntu%5D%E4%B8%8D%E5%AE%9A%E6%9C%9F%E6%9B%B4%E6%96%B0%E7%9A%84%E6%97%A5%E5%B8%B8.md
+-------------------------------------------------------
+之前的放弃，采用ThunderMini-x86_64.AppImage 迅雷精简版
+推荐https://github.com/Hackerl/Wine_Appimage/releases
+https://github.com/Hackerl/Wine_Appimage
