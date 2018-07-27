@@ -1,0 +1,24 @@
+https://blog.csdn.net/ezhchai/article/details/80548130
+Ubuntu16.04 笔记本合上盖子时不进入休眠
+在笔记本上装ubuntu系统，也可以从事相关开发工作。但笔记本存在这样的情况，就是有时服务功能设好了，不需要操作了，但是希望机器一直开机提供服务，或者长期下载大文件。此时，为了省电，可将笔记本屏幕合上，静待其完成任务。 
+但是，在默认情况下，笔记本合上屏幕后，ubuntu系统会休眠，我试着用GUI改了一下设置，实践证明没有效果，还是直接修改配置文件来得快，方法如下： 
+修改 Login Manager的配置文件。 
+打开终端： 
+sudo vim /etc/systemd/logind.conf 
+然后将其中的：
+
+#HandleLidSwitch=suspend
+1
+改成：
+
+HandleLidSwitch=ignore
+1
+然后重启服务： 
+sudo restart systemd-logind 
+或者 
+service systemd-logind restart 
+或者直接重启 
+sudo shutdown -r now 
+即可使设置生效。
+
+

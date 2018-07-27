@@ -1,0 +1,15 @@
+FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is depr
+https://blog.csdn.net/langjijianghu_123/article/details/79933966
+运行tensorflow测试程序时，出现：FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+
+环境：
+
+
+MacOS 10.13.2
+Python 3.6.4
+国内网上试过许多方法都不行，直到跳墙google里看到 
+
+pip install h5py==2.8.0rc1
+
+完美解决

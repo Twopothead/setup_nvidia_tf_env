@@ -1,0 +1,3 @@
+首先要创建/usr/local/cuda-9.0这个文件夹，并赋予其读写权限
+我开始时没有创建，程序没法安装，失败了
+https://blossomnoodles.github.io/cnBlogs/2018/04/30/Ubuntu18.04-Tensorlow-install.html

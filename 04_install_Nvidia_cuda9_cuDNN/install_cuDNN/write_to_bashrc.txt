@@ -1,0 +1,6 @@
+https://blog.csdn.net/ksws0292756/article/details/80034086
+安装完正确的版本后，确认你在你的~/.bashrc（或者~/.zshrc）文件中加入了下面环境变量
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
+export PATH=$PATH:/usr/local/cuda-9.0/bin
+export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0

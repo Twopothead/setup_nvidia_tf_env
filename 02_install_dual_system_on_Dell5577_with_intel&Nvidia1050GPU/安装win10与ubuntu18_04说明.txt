@@ -1,0 +1,5 @@
+目前实现win10/ubuntu16.04双系统有两种方案:
+1.依然以Windows Boot Mananger为主引导，但需要关闭UEFI和Secure Boot、开启Legacy/CSM，最后通过EasyBCD手动添加Ubuntu入口；
+2.以GRUB2作为主引导。
+显而易见，第二种方案更省时省力。
+https://blog.csdn.net/zifehng/article/details/79514756

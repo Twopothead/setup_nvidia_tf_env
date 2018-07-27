@@ -1,0 +1,4 @@
+在我们安装了Anaconda之后。我们必须改变“Anaconda3”的拥有者，否则我们不能将文件写入此目录。 我们检查我们的用户名和用户组。
+$ groups
+由于我的用户组是bryan，我的用户名也是bryan。所以我会将下面的命令改为“chown -R bryan：brayn anaconda3”。“-R”的意思是迭代，这个参数将改变整个anacodna3文件的所有者。
+https://blossomnoodles.github.io/cnBlogs/2018/04/30/Ubuntu18.04-Tensorlow-install.html

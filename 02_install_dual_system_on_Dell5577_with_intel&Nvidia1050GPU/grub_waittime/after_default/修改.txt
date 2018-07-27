@@ -1,0 +1,37 @@
+不要直接修改/boot/grub/grub.cfg，直接修改这个文件有用，但是可能在update-grub命令后又被覆盖，所以推荐修改/etc/default/grub文件。
+
+修改前的配置文件(/etc/default/grub)：
+
+复制代码
+GRUB_DEFAULT=0
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+复制代码
+ 修改后的配置文件：
+
+复制代码
+GRUB_DEFAULT=0
+#GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=3
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+复制代码
+一切都修改完成后，运行更新命令。
+
+sudo update-grub
+说明：
+
+配置文件中蓝色加粗部分修改是为了实现改变grub菜单的默认等待时间。
+
+红色加粗部分的修改是为了开机显示详细信息。
+
+修改等待时间，将GRUB_TIMEOUT改成你想要的时间，单位是秒。一定要注意注释掉GRUB_HIDDEN_TIMEOUT，不然修改不起作用。
+
+修改开机显示详细信息，直接将GRUB_CMDLINE_LINUX_DEFAULT注释掉即可。但我在http://www.xzcblog.com/post-160.html博文中看到说还要修改/etc/grub.d/10_linux文件。我没有那么作也成功了，或许是他的ubuntu版本比较老，或许有其他原因，如果大家只修改grub文件不起作用时，可以去参考他的文章
+https://www.cnblogs.com/re1n/p/6009946.html。
