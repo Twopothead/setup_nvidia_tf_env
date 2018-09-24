@@ -1,0 +1,2 @@
+sudo apt-get install unrar
+sudo mkdir cajviewer  ;  sudo unrar x CAJViewer6.0_green.rar cajviewer

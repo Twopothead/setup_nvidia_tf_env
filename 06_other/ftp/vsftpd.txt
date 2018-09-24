@@ -1,0 +1,2 @@
+sudo usermod -d /sex/files ftp
+sudo systemctl restart vsftpd.service
