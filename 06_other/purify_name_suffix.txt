@@ -1,0 +1,21 @@
+# 001—考研数学真题解析数一1998、1999、2002【2019考研资料免费更新中关注微信公众号_快乐考研人_获取及时更新】.mp4
+rename 's/ /_/g' ./*
+# 1 2 3 4.txt => 1_2_3_4.txt
+oldsuffix="mp4.baiduyun.p.downloading"
+newsuffix="mp4"
+dir=$(eval pwd)
+
+# for file in $( find . -type f  -print | grep .${oldsuffix})
+for file in $(ls $dir | grep .${oldsuffix})
+    do
+    	echo $file
+        name=$(ls ${file} | cut -d. -f1)
+  		cleanname=`echo $name | sed 's/【2019考研资料免费更新中关注微信公众号_快乐考研人_获取及时更新】//g'`
+        echo $cleanname
+        mv $file  ${cleanname}.${newsuffix} 
+    done
+echo "change mp4.baiduyun.p.downloading to mp4 successd!"
+
+# echo "001—考研数学真题解析数一1998、1999、2002【2019考研资料免费更新中关注微信公众号_快乐考研人_获取及时更新】.mp4" | sed 's/【2019考研资料免费更新中关注微信公众号_快乐考研人_获取及时更新】//g']
+# 002—考研数学真题解析数一1998、1999、2002.mp4
+

@@ -1,0 +1,7 @@
+sudo apt install gconf-editor
+# 乱码有时不是压缩问题　而是编辑器字符编码问题
+# https://blog.csdn.net/jinyu421/article/details/81453162?utm_source=blogxgwz9
+export GIO_EXTRA_MODULES=/usr/lib/x86_64-linux-gnu/gio/modules/
+gsettings set org.gnome.gedit.preferences.encodings candidate-encodings "['GB18030', 'GB2312', 'GBK', 'UTF-8', 'BIG5', 'CURRENT', 'UTF-16']"
+# 问题解决
+

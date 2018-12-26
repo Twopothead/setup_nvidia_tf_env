@@ -1,0 +1,65 @@
+% !Mode::"TeX:UTF-8"
+\documentclass[UTF8]{ctexart}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{ifpdf,ifxetex}
+\usepackage{amsmath,amssymb,amsthm,bm,bbding,pifont,dsfont}
+\usepackage{mathtools}
+\usepackage{paralist,cases,tabularx}
+\usepackage{pstricks,pst-plot,xcolor,graphicx,tikz,pgfplots,pgfmath,tikz-3dplot}
+\usepackage{esvect,stmaryrd}
+\usetikzlibrary{calc,math,arrows.meta,graphs,intersections}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage{setspace} 
+%\usepackage{txfonts}
+\usepackage[paperwidth=6cm,paperheight=7cm,,top=1cm,bottom=0cm]{geometry}% 单页
+
+
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+\begin{document} 
+
+\begin{tikzpicture}
+\tikzmath{
+\a=sqrt(2);
+\b=\a/2;
+}
+\coordinate (p) at (0,0) {};
+%\draw (p)--++(-1,0)--++(2,0)--++(-1,0)--cycle;
+\draw (p) rectangle +(2,2);
+\coordinate(o) at (1,1) {};
+\draw (0,2)--(o)--(2,2) (o)--(1,0);
+%\draw[densely dashed,thin] (p)--($(p)+(2,2)$);
+%\draw ($(p)$)--($(p)+(1,0)$)--($(p)+(2,0)$);
+\node (p1) at (0.5,-0.2) {\tiny 1};
+\draw[->|,>=stealth](p1)--($(p1)+(0.5,0)$);
+\draw[->|,>=stealth](p1)--($(p1)+(-0.5,0)$);
+\node (p2) at (1.5,-0.2){\tiny 1};
+\draw[->|,>=stealth](p2)--($(p2)+(0.5,0)$);
+\draw[->|,>=stealth](p2)--($(p2)+(-0.5,0)$);
+\node (p3) at (2.2,0.5) {\tiny 1};
+\draw[->|,>=stealth](p3)--($(p3)+(0,0.5)$);
+\draw[->|,>=stealth](p3)--($(p3)+(0,-0.5)$);
+\node (p4) at (2.2,1.5) {\tiny 1};
+\draw[->|,>=stealth](p4)--($(p4)+(0,0.5)$);
+\draw[->|,>=stealth](p4)--($(p4)+(0,-0.5)$);
+\node (s) at(1,-0.5){\small 正视图}; 
+\begin{scope}[xshift=2.5 cm]
+\coordinate (p) at (0,0);
+\draw (p)--+($(\a,0)$)--+($(\a,\a)$)--+($(0,2)$)--cycle;
+\node(p2) at (\b,-0.2){\tiny $\sqrt{3}$};
+\draw [->|,>=stealth](p2)--($(p2)+(0.7,0)$);
+\draw [->|,>=stealth](p2)--($(p2)+(-0.7,0)$);
+\node (s) at(\b,-0.5){\small 侧视图}; 
+\end{scope}
+\begin{scope}[yshift=-1cm]
+\draw (0,0)--+(2,0)--+(1,-1.5)--cycle;
+\node (s) at(1,-1.8){\small 俯视图}; 
+%\caption{俯视图}
+\end{scope}
+\end{tikzpicture}
+	
+
+	
+\end{document}
