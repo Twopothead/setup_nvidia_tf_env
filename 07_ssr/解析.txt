@@ -1,0 +1,2 @@
+sudo gedit /etc/resolv.conf   
+nameserver 202.120.80.2  
