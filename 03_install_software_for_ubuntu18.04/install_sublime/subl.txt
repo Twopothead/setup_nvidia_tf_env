@@ -1,0 +1,74 @@
+Cloning into 'sublime-text-imfix'...
+remote: Enumerating objects: 198, done.
+remote: Total 198 (delta 0), reused 0 (delta 0), pack-reused 198
+Receiving objects: 100% (198/198), 124.60 KiB | 257.00 KiB/s, done.
+Resolving deltas: 100% (78/78), done.
+Checking for installation of Sublime Text 3...........
+/usr/bin/subl
+.............................................Installed
+
+Checking for installation of Fcitx Input Methods....
+/usr/bin/fcitx
+...........................................Installed
+/usr/bin/subl
+/usr/bin/fcitx
+
+*********** Adding shared lib to sublime directory ***********
+
+*********** Checking for existing file ***********************
+[sudo] password for curie: 
+
+*********** Replacing subl with new one **********************
+
+*********** Replacing sublime-text.desktop with new one ******
+
+*********** Sublime Text input method problem fixed! *********
+
+*********** More: Installing extra skins *********************
+
+*********** Unpacking skin into current directory ************
+
+anran/cangjie.png
+anran/wanfeng.png
+anran/ziranma.png
+anran/vk_inactive.png
+anran/next.png
+anran/input.png
+anran/punc_inactive.png
+anran/menu.png
+anran/bingchan.png
+anran/vk_active.png
+anran/wubi.png
+anran/quwei.png
+anran/punc_active.png
+anran/erbi.png
+anran/active.png
+anran/
+anran/fcitx_skin.conf
+anran/bar.png
+anran/keyboard.png
+anran/logo.png
+anran/kbd.png
+anran/cn.png
+anran/chttrans_active.png
+anran/sunpinyin.png
+anran/prev.png
+anran/pinyin.png
+anran/fullwidth_inactive.png
+anran/inactive.png
+anran/dianbaoma.png
+anran/wbpy.png
+anran/fullwidth_active.png
+anran/remind_inactive.png
+anran/remind_active.png
+anran/shuangpin.png
+anran/chttrans_inactive.png
+anran/en.png
+** Copying skin to Fcitx skin directory: /usr/share/fcitx/skin **
+
+Done!
+
+Thanks for using this script to fix CJK Input Method problem of SublimeText 2/3.
+
+Re-login your X windows and start to use SublimeText 2/3 with Fcitx!
+

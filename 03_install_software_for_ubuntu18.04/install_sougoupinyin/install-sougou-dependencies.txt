@@ -1,0 +1,54 @@
+# Ubuntu  安装Fcitx-qt5 & 搜狗输入法
+# https://my.oschina.net/lieefu/blog/505363?p=1
+# 搜狗输入法异常！请删除.config/SogouPY 并重启 https://www.meiwen.com.cn/subject/vrfzvftx.html
+# 我用的是Manjaro系统，突然有一天搜狗就不能用了，总是提示上述语句。删除了相关文件并且重启还是没有用。后来在终端中输入
+# sogou-qimpanel
+# 提示找不到libfcitx-qt.so，于是找到原因，安装fcitx-qt4就可以成功解决上述问题。
+# yaourt -S fcitx-qt4
+
+# ubuntu16.04下搜狗输入法异常　https://www.cnblogs.com/rkfeng/p/8017746.html
+sudo apt remove ibus*
+sudo apt-get install extra-cmake-modules
+sudo apt-get install fcitx-frontend-qt4 fcitx-frontend-qt5 fcitx-libs-qt  libfcitx-qt0 libfcitx-qt5-1
+# 注销再登录即可在qt程序下使用fcitx的中文输入法，不需要修改环境变量等
+# Ubuntu在wps-office等qt5程序下不能切换中文fcitx输入法的问题
+sudo apt-get install fcitx-libs-dev
+# https://my.oschina.net/lieefu/blog/505363?p=1
+#遇到Could not find a package configuration file provided by "ECM"错误处里方法：
+
+#这个页面 https://launchpad.net/ubuntu/+source/extra-cmake-modules/1.4.0-0ubuntu1 下载 extra-cmake-modules_1.4.0.orig.tar.xz
+
+#https://launchpad.net/ubuntu/+source/extra-cmake-modules/5.18.0-0ubuntu1  extra-cmake-modules_5.18.0.orig.tar.xz
+# Could NOT find XKBCommon_XKBCommon (missing:  XKBCommon_XKBCommon_LIBRARY 
+sudo apt install libxkbcommon-dev
+#fatal error: X11/XF86keysym.h: No such file or directory #include <X11/XF86keysym.h>
+sudo apt-get install x11proto-core-dev
+# fcitx-qt5
+cmake .
+make 
+sudo make install
+
+# https://www.cnblogs.com/xuxiuxiu/p/3823820.htmld、
+# 上面列出了20个包，但是如下17个应该是必须的：搜狗拼音输入法　
+sudo apt-get install fcitx
+sudo apt-get install fcitx-bin
+sudo apt-get install fcitx-config-common
+sudo apt-get install fcitx-config-gtk
+sudo apt-get install fcitx-data
+sudo apt-get install fcitx-frontend-gtk2
+sudo apt-get install fcitx-frontend-gtk3
+sudo apt-get install fcitx-frontend-qt4
+
+＃　安装个谷歌拼音也不错
+sudo apt-get install fcitx-googlepinyin
+sudo apt-get install fcitx-libs
+sudo apt-get install fcitx-module-dbus
+sudo apt-get install fcitx-module-x11
+sudo apt-get install fcitx-modules
+sudo apt-get install fcitx-pinyin
+sudo apt-get install fcitx-table
+sudo apt-get install fcitx-table-wubi
+sudo apt-get install fcitx-ui-classic
+sudo apt-get install fcitx-config-gtk
+
+
